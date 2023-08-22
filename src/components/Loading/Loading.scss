@@ -1,0 +1,55 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+@-webkit-keyframes rotateLoad {
+	0% {
+		-webkit-transform-origin: center;
+		transform-origin: center;
+		-webkit-transform: rotate3d(0, 0, 1, -360deg);
+		transform: rotate3d(0, 0, 1, -360deg);
+	}
+	100% {
+		-webkit-transform-origin: center;
+		transform-origin: center;
+		-webkit-transform: none;
+		transform: none;
+	}
+}
+
+@keyframes rotateLoad {
+	0% {
+		-webkit-transform-origin: center;
+		transform-origin: center;
+		-webkit-transform: rotate3d(0, 0, 1, 360deg);
+		transform: rotate3d(0, 0, 1, 360deg);
+	}
+	100% {
+		-webkit-transform-origin: center;
+		transform-origin: center;
+		-webkit-transform: none;
+		transform: none;
+	}
+}
+
+.loading {
+    flex-direction: column-reverse;
+    text-transform: uppercase;
+    color: $color_red2;
+    text-align: center;
+    padding: 20px;
+    font-size: .8rem;
+    
+    svg {
+        font-size: 1rem;
+        display: block;
+        margin: 0 auto 10px;
+		-webkit-animation-name: rotateLoad;
+		animation-name: rotateLoad;
+		-webkit-animation-duration: 1s;
+		animation-duration: 1s;
+		-webkit-animation-fill-mode: linear;
+		animation-fill-mode: linear;
+		-webkit-animation-iteration-count: infinite;
+		animation-iteration-count: infinite;
+	}
+}
