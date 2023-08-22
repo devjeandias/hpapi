@@ -1,20 +1,27 @@
-import Card from '../Card'
+import axios from 'axios';
+import { useQuery } from 'react-query';
+import Card from '../Card';
+import Loading from '../Loading';
+import Error from '../Error';
 
 function CharactersList() {
-    let Characters = Array("item 1","item 2","item 3","item 4");
+    const { data, isLoading, error } = useQuery('characters', () => {
+        return axios.get("https://hp-api.onrender.com/api/characters").then( response => response.data );
+    });
+
+    if( isLoading ) {
+        return <Loading />;
+    }
+
+    if( error ) {
+        return <Error />;
+    }
+
     return (
         <div className='characters__list'>
-            {
-                Characters.map( item => (
-                    <Card
-                        key={Math.random()}
-                        data={[{
-                            name: "Nome",
-                            wizard: "Casa"
-                        }]}
-                    />
-                ))
-            }
+            { data.map( character => (
+                <Card key={ character.id + Math.random() } data={character} />
+            )) }
         </div>
     );
 }
