@@ -1,0 +1,9 @@
+function App() {
+  return (
+    <>
+      <h1>Harry Potter API</h1>
+    </>
+  )
+}
+
+export default App
