@@ -1,8 +1,12 @@
-import { FaCalendarCheck, FaStar, FaHatWizard, FaHeartPulse } from 'react-icons/fa6';
+// import { FaCalendarCheck, FaStar, FaHatWizard, FaHeartPulse } from 'react-icons/fa6';
+import CardImg  from './CardImg';
+import './Card.scss';
 
-function Card() {
+function Card({data}) {
     return (
-        <div className="character__card">Name</div>
+        <div className="character__card">
+            <CardImg src={data.image} />
+        </div>
     );
 }
 

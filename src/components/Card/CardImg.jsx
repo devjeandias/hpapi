@@ -1,7 +1,12 @@
-function CardImg() {
-    return (
-        <div className="character__img"></div>
-    );
-}
+import { FaUserAlt } from "react-icons/fa";
 
-export default CardImg
+function CardImg( { src } ) {
+    return (
+        <figure className="character__image">
+            { src && <img src={src} /> }
+            { !src && <FaUserAlt /> }
+        </figure>
+    )
+};
+
+export default CardImg;

@@ -4,7 +4,11 @@
 .characters {
     &__list {
         display: grid;
-        grid-template-columns: 50% 50%;
+        grid-template-columns: 100%;
+
+        @include media-min-sm {
+            grid-template-columns: 50% 50%;
+        }
         
         @include media-min-md {
             grid-template-columns: 33.3% 33.3% 33.3%;
