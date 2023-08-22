@@ -33,7 +33,19 @@
 
     }
     
-    // &__name {}
+    &__name {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+        color: variables.$color_red2;
+        
+        small {
+            color: variables.$color_black;
+            font-weight: 300;
+            font-size: .9rem;
+            display: block;
+        }
+    }
+
     // &__infos {}
     // &__item {}
 }
