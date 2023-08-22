@@ -1,0 +1,7 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.error {
+	@include statusRequest;
+	color: $color_red2;
+}

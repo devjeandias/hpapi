@@ -32,18 +32,11 @@
 }
 
 .loading {
-    flex-direction: column-reverse;
-    text-transform: uppercase;
-    color: $color_red2;
-    text-align: center;
-    padding: 20px;
-    font-size: .8rem;
-    
+    @include statusRequest;
+	color: inherit;
+
     svg {
-        font-size: 1rem;
-        display: block;
-        margin: 0 auto 10px;
-		-webkit-animation-name: rotateLoad;
+        -webkit-animation-name: rotateLoad;
 		animation-name: rotateLoad;
 		-webkit-animation-duration: 1s;
 		animation-duration: 1s;
@@ -51,5 +44,5 @@
 		animation-fill-mode: linear;
 		-webkit-animation-iteration-count: infinite;
 		animation-iteration-count: infinite;
-	}
+    }
 }
