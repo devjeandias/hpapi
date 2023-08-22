@@ -1,0 +1,24 @@
+@use '../../styles/variables';
+@import '../../styles/mixins';
+
+.header {
+    @include center;
+    padding: 50px 15px;
+    
+    &__title {
+        font-family: variables.$fontFamilyHarryPotter;
+        color: variables.$color_red1;
+        font-size: 3.5rem;
+    }
+    
+    &__subtitle {
+        color: variables.$color_black;
+        text-transform: uppercase;
+        font-size: .8rem;
+    }
+    
+    &__title + p,
+    &__subtitle + p {
+        margin-top: 20px;
+    }
+}

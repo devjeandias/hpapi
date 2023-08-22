@@ -1,7 +1,11 @@
+import Header from "./components/Header";
+
 function App() {
   return (
     <>
-      <h1>Harry Potter API</h1>
+      <main>
+        <Header />
+      </main>
     </>
   )
 }
