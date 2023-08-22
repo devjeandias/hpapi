@@ -3,22 +3,35 @@
 
 .header {
     @include center;
-    padding: 50px 15px;
+    padding: 30px 15px;
     
     &__title {
         font-family: variables.$fontFamilyHarryPotter;
         color: variables.$color_red1;
-        font-size: 3.5rem;
+        font-size: 2.8rem;
     }
     
     &__subtitle {
         color: variables.$color_black;
         text-transform: uppercase;
-        font-size: .8rem;
+        font-size: 1rem;
     }
     
     &__title + p,
     &__subtitle + p {
         margin-top: 20px;
+    }
+}
+
+@include media-min-md {
+    .header {
+        padding: {
+            top: 50px;
+            bottom: 50px;
+        }
+        
+        &__title {
+            font-size: 3.5rem;
+        }
     }
 }
