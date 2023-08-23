@@ -1,6 +1,6 @@
 import { FaUserAlt } from "react-icons/fa";
 
-function CardImg( { src } ) {
+function CardImagem( { src } ) {
     return (
         <figure className="character__image">
             { src && <img src={src} /> }
@@ -9,4 +9,4 @@ function CardImg( { src } ) {
     )
 };
 
-export default CardImg;
+export default CardImagem;
